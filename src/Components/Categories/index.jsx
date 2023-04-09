@@ -4,7 +4,6 @@ import { showCategory } from "../../store/categories";
 import './Categories.scss'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import Products from "../Products";
