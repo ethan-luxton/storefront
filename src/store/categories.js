@@ -26,8 +26,8 @@ export const selectCategoryProducts = (state, selectedCategory) => {
       : [];
   };
 
-// Add this line at the end of your categorySlice.js file
+
 export const { showCategory } = categorySlice.actions;
 
-// Export the reducer instead of the slice
+
 export default categorySlice.reducer;

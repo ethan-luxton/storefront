@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { showCategory } from "../../store/categories";
+import './Categories.scss'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import Products from "../Products";
@@ -21,7 +21,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
@@ -63,7 +63,7 @@ function TabPanel(props) {
     };
     
     return (
-      <>
+      <span>
       
         <h2 align="left">Browse our Categories</h2>
         <Box sx={{ width: "100%" }}>
@@ -83,15 +83,16 @@ function TabPanel(props) {
                 </Tabs>
             </Box>
             {categories.map((category, index) => (
-                <TabPanel key={category.name} value={value} index={index} name={category.displayName}>
-                <h1>{category.displayName}</h1>
-                <h3>{category.description}</h3>
+                <TabPanel key={category.name} value={value} index={index} name={category.displayName} role={category.displayName}>
+                <span className="displayName">{category.displayName}</span>
+                <br />
+                <span className="description">{category.description}</span>
                 <br />
                 <Products selectedCategory={category} />
               </TabPanel>
             ))}
         </Box>
-      </>
+      </span>
     );
 }
 
