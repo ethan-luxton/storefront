@@ -1,3 +1,28 @@
+# Todo-App - Lab - Class 38
+
+### Authors: Ethan Luxton
+
+## Project: Redux - Asynchronous Actions
+
+### Problem Domain
+
+The user stories from Phases 1 and 2 remain unchanged. For this phase, we are now adding the following new user stories to meet the new requirements.
+
+* As a user, I want to interact with live inventory so that I have confidence that the displayed products are in stock.
+* As a user, I want to know to that when I add an item to my cart, that it is removed from inventory so that no other users can purchase it.
+
+#### Features
+
+-   Feature One: Added GET functionality to retreive categories and products from the API.
+-   Feature Two: Testing
+-   Feature Three: Deploy to Dev
+-   Feature Four: Deploy to main
+-   [Deployed to Netlify.com](https://endearing-platypus-7c1d6c.netlify.app/)
+
+## UML
+
+![uml](https://i.imgur.com/90LHAFp.png)
+-----------------------------------------------------------
 # Todo-App - Lab - Class 37
 
 ### Authors: Ethan Luxton
