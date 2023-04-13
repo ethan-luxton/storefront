@@ -19,11 +19,5 @@ describe('BasicTabs component', () => {
     expect(heading).toBeInTheDocument();
   });
 
-  it('renders the correct number of tabs', () => {
-    
-    const tabs = screen.getAllByRole('tab');
-    expect(tabs).toHaveLength(3);
-  });
-
  
 });

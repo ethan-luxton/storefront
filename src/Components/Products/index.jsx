@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectCategoryProducts } from "../../store/categories";
+import { selectCategoryProducts, updateProduct } from "../../store/categories";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -10,12 +10,18 @@ import './Products.scss'
 import { addItem } from "../../store/cart";
 
 const Products = ({ selectedCategory }) => {
+    
+    
     const dispatch = useDispatch();
+    const doUpdateProduct = () => {
+        dispatch(updateProduct({ product: products[0], stockAmount: -2 }));
+      };
     const products = useSelector((state) =>
       selectCategoryProducts(state, selectedCategory)
     );
     const handleChange = (product) => {
         dispatch(addItem(product));
+        doUpdateProduct();
     };
     return (
       <div className="cards">
