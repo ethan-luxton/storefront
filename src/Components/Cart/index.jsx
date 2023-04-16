@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useDispatch, useSelector } from "react-redux";
 import { deleteItem } from "../../store/cart";
+import { Link } from "react-router-dom";
 import './Cart.scss'
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -60,10 +61,13 @@ function Cart() {
         }}
       >
       <div className='cartBlock'>
-      {cartItems.cartItems.length > 0 ?
+      {cartItems.cartItems.length > 0 ? 
         cartItems.cartItems.map((product, idx) => (
-          <span key={idx}>{product.name} ${product.price}<Button onClick={() => dispatch(deleteItem(product._id))}>Remove</Button></span>
+       
+            <span key={idx}>{product.name} ${product.price}<Button onClick={() => dispatch(deleteItem(product._id))}>Remove</Button></span>
+
         )) : <MenuItem onClick={handleClose}>Your cart is empty!</MenuItem>}
+        <Link role='cartLink' align="center" to={'/cart'}>Checkout</Link>
       </div>
       
         

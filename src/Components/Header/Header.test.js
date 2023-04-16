@@ -2,10 +2,15 @@ import { render, screen } from '@testing-library/react';
 import Header from './index';
 import store from "../../store/index";
 import { Provider } from "react-redux";
-
+import { BrowserRouter } from 'react-router-dom';
 beforeEach(() => {
   
-  render( <Provider store={store}><Header /></Provider>);
+  render( <BrowserRouter>
+            <Provider store={store}>
+              <Header />
+            </Provider>
+          </BrowserRouter>
+  );  
 })
 describe('Header component', () => {
   it('renders without crashing', () => {

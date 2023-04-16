@@ -5,3 +5,46 @@
     display: grid;
     grid-template-columns: 1;
 }
+
+.cart-page {
+    padding: 1rem;
+  }
+  
+  .cart-paper {
+    padding: 2rem;
+    width: 900px;
+  }
+  
+  .section-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+  }
+  
+  .total {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .total-label {
+    margin-right: 0.5rem;
+  }
