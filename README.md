@@ -1,3 +1,30 @@
+# Todo-App - Lab - Class 39
+
+### Authors: Ethan Luxton
+
+## Project: Redux - Additional Topics
+
+### Problem Domain
+
+The user stories from Phases 1, 2 and 3 remain unchanged. For this phase, we are now adding the following new user stories to meet the new requirements.
+
+* As a user, I want to see a full detail view of a product so that I can make a more informed choice about purchasing it.
+* As a user, I want to view my full cart and initiate the checkout process so that I can purchase my items and have them delivered.
+
+#### Features
+
+-   Feature One: Added BrowserRouter functionality.
+-   Feature Two: Added 'Cart' page to show items, total and allows the user to enter billing/payment info.
+-   Feature Three: Added 'Product Details' page to show more details about a given product.
+-   Feature Four: Testing
+-   Feature Five: Deploy to Dev
+-   Feature Six: Deploy to main
+-   [Deployed to Netlify.com](https://endearing-platypus-7c1d6c.netlify.app/)
+
+## UML
+
+![uml](https://i.imgur.com/BFvll7s.png)
+-----------------------------------------------------------
 # Todo-App - Lab - Class 38
 
 ### Authors: Ethan Luxton

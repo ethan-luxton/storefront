@@ -29,3 +29,32 @@
       --columns: 5;
     }
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h4 {
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle1 {
+    margin-bottom: 1rem;
+  }
+  
+  h5 {
+    margin-bottom: 1rem;
+  }
+  
+  .related-items {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .suggested-items {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  

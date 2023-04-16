@@ -17,7 +17,7 @@ export const loadProducts = createAsyncThunk("products/load", async () => {
 export const updateProduct = createAsyncThunk(
   "products/update",
   async ({ product, stockAmount }) => {
-    console.log(product)
+
     const updatedProduct = {
       ...product,
       inStock: product.inStock - stockAmount,
@@ -59,6 +59,7 @@ const categorySlice = createSlice({
         state.products = payload;
       });
   },
+  
 });
 
 export const selectCategoryProducts = (state, selectedCategory) => {

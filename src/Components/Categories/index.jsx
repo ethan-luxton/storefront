@@ -42,9 +42,7 @@ function TabPanel(props) {
   }
   
   export default function BasicTabs() {
-    console.log(process.env.REACT_APP_API)
     const { categories, selectedCategory } = useSelector((state) => state.categories);
-    console.log(categories)
     const dispatch = useDispatch();
   
     const selectedIndex = categories.findIndex(

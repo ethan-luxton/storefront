@@ -3,13 +3,15 @@ import { render, screen } from '@testing-library/react';
 import BasicTabs from './index';
 import { Provider } from 'react-redux';
 import store from "../../store/index";
-
+import { BrowserRouter } from 'react-router-dom';
 beforeEach(() => {
   
   render(
-    <Provider store={store}>
-      <BasicTabs />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <BasicTabs />
+      </Provider>
+    </BrowserRouter>
   );
 })
 describe('BasicTabs component', () => {

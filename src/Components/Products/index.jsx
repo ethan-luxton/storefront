@@ -8,11 +8,17 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './Products.scss'
 import { addItem } from "../../store/cart";
-
+import {useNavigate} from 'react-router-dom';
+import { viewItem } from '../../store/product'
 const Products = ({ selectedCategory }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const handleNavClick = (product) =>{
+    navigate('/product-details');
+    
+  };
     
     
-    const dispatch = useDispatch();
     const doUpdateProduct = () => {
         dispatch(updateProduct({ product: products[0], stockAmount: -2 }));
       };
@@ -23,6 +29,9 @@ const Products = ({ selectedCategory }) => {
         dispatch(addItem(product));
         doUpdateProduct();
     };
+    const viewProduct = (product) => {
+      dispatch(viewItem(product))
+    }
     return (
       <div className="cards">
         {products.map((product, idx) => (
@@ -41,7 +50,7 @@ const Products = ({ selectedCategory }) => {
                 </CardContent>
                 <CardActions>
                     <Button onClick={() => handleChange(product)} size="small">Add to cart</Button>
-                    <Button size="small">Learn More</Button>
+                    <Button role='button' aria-label='Learn More' size="small" onClick={() => {handleNavClick(); viewProduct(product);}}>Learn More</Button>
                 </CardActions>
             </Card>
           ))}
